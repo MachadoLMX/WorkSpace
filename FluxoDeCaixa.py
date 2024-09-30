@@ -9,25 +9,27 @@ print("1 - Adicionar receita")
 print("2 - Adicionar despesa")
 print("\n# Digite outro numero para encerrar #\n")
 
+
+# adicionado funcao para reduzir código
+
+def adicionar_transacao():
+
+    nome = input("Nome: ")
+    valor = float( input ("Valor: ") )
+    fluxo_caixa.append({
+        "nome": nome,
+        "valor": valor
+    })
+
 while True:
 
     opcao = int( input("Digete a opção: ") )
 
     if opcao == 1:
-        nome = input("Nome: ")
-        valor = float( input ("Valor: ") )
-        fluxo_caixa.append({
-            "nome": nome,
-            "valor": valor
-        })
+        adicionar_transacao()
 
     elif opcao == 2:
-        nome = input ("Nome: ")
-        valor = float( input("Valor ") )
-        fluxo_caixa.append({
-            "nome": nome,
-            "valor": valor
-        })
+       adicionar_transacao()
     else:
         break
 
